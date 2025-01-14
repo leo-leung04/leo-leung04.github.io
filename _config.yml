@@ -170,7 +170,7 @@ exclude:
   - _pages/news.md
   - _pages/profiles.md
   - _projects/
-  - _pages/project.md
+  - _pages/projects.md
   - _pages/dropdown.md
 keep_files:
   - CNAME
