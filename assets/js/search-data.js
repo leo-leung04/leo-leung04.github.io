@@ -21,7 +21,7 @@ ninja.data = [{
           description: "This is a description of the page. You can modify it in &#39;_pages/vitae.md&#39;.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/_pages/vitae.html";
+            window.location.href = "/projects/";
           },
         },{
         id: 'social-email',
