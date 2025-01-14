@@ -35,7 +35,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/jcliang316@gmail.com", "_blank");
+          window.open("https://www.linkedin.com/in/jingcheng-liang-02892432b", "_blank");
         },
       },{
         id: 'social-rss',
