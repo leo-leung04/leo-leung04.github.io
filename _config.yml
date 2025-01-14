@@ -98,19 +98,19 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /:collection/:title/
+  # news:
+  #   defaults:
+  #     layout: post
+  #   output: true
+  #   permalink: /:collection/:title/
   projects:
     output: true
     permalink: /:collection/:title/
 
-announcements:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+# announcements:
+#   enabled: true
+#   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+#   limit: 5 # leave blank to include all the news in the `_news` folder
 
 # latest_posts:
 #   enabled: false
@@ -159,6 +159,8 @@ exclude:
   - _pages/teaching.md
   - _pages/people.md
   - _posts/
+  - _news/
+  - _includes/news.liquid
   - _pages/blog.md
   - _pages/cv.md
   - _data/cv.yml
@@ -166,6 +168,7 @@ exclude:
   - _pages/404.md
   - _pages/about_einstein.md
   - _pages/news.md
+  - _pages/profiles.md
 keep_files:
   - CNAME
   - .nojekyll
