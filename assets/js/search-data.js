@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-vitae",
+          title: "vitae",
+          description: "This is a description of the page. You can modify it in &#39;_pages/vitae.md&#39;.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/_pages/vitae.html";
+          },
         },{
         id: 'social-email',
         title: 'email',
