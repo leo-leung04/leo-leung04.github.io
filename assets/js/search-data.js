@@ -45,13 +45,6 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/jingcheng-liang-02892432b", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
         id: 'social-x',
         title: 'X',
         section: 'Socials',
