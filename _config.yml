@@ -160,7 +160,12 @@ exclude:
   - _pages/people.md
   - _posts/
   - _pages/blog.md
-  - ——pages/cv.md
+  - _pages/cv.md
+  - _data/cv.yml
+  - _includes/cv
+  - _pages/404.md
+  - _pages/about_einstein.md
+  - _pages/news.md
 keep_files:
   - CNAME
   - .nojekyll
