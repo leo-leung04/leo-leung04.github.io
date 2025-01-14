@@ -7,7 +7,7 @@ first_name: Jingcheng
 middle_name: (Leo)
 last_name: Liang
 contact_note: >
-  jcliang316@gmail.com
+  jcliang316@gmail.com (+1)763-900-1252
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -22,7 +22,7 @@ url: https://leo-leung04.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+back_to_top: false # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -97,15 +97,15 @@ newsletter:
 # Collections
 # -----------------------------------------------------------------------------
 
-collections:
+# collections:
   # news:
   #   defaults:
   #     layout: post
   #   output: true
   #   permalink: /:collection/:title/
-  projects:
-    output: true
-    permalink: /:collection/:title/
+  # projects:
+  #   output: true
+  #   permalink: /:collection/:title/
 
 # announcements:
 #   enabled: true
@@ -169,6 +169,9 @@ exclude:
   - _pages/about_einstein.md
   - _pages/news.md
   - _pages/profiles.md
+  - _projects/
+  - _pages/project.md
+  - _pages/dropdown.md
 keep_files:
   - CNAME
   - .nojekyll
