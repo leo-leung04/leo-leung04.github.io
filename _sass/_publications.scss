@@ -8,7 +8,7 @@
   margin-top: 2rem;
 
   h1 {
-    color: var(--global-theme-color);
+    color: var(--global-text-color);
     font-size: 2rem;
     text-align: center;
     margin-top: 1em;
@@ -73,7 +73,7 @@
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          border-bottom: 1px dashed var(--global-text-color-light);
 
           &:hover {
             border-bottom-style: solid;

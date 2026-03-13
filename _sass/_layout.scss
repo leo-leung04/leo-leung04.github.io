@@ -29,15 +29,209 @@ body.sticky-bottom-footer {
   padding-bottom: 0;
 }
 
+.post-header .desc .subtitle-school-logo {
+  height: 1em;
+  width: auto;
+  max-width: 2.2em;
+  margin: 0 0.0em 0 0.12em;
+  vertical-align: -0.15em;
+}
+
+.post-header .desc .subtitle-school-logo-umn {
+  height: 0.9em;
+  max-width: 1.9em;
+  vertical-align: -0.1em;
+}
+
+.about-inline-brand-icon {
+  height: 0.95rem;
+  width: auto;
+  max-width: 1.8rem;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 0 0.12em 0 0.04em;
+  vertical-align: -0.12em;
+}
+
+.about-inline-brand-icon-umn {
+  height: 0.82rem;
+  max-width: 1.55rem;
+  vertical-align: -0.08em;
+}
+
+.about-inline-affiliation-link {
+  display: inline;
+}
+
+.about-inline-affiliation-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.05em;
+}
+
+.about-post .post-header .post-title .name-native {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 0.48em;
+  line-height: 1.1;
+  position: static;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  color: #444;
+  font-family: "Songti SC", "STSong", "SimSun", "Microsoft YaHei", serif;
+  white-space: nowrap;
+}
+
+.post-header .desc a {
+  color: #7a0019;
+}
+
+.post-header .desc a:hover {
+  color: #5b0013;
+}
+
+.about-post .clearfix > p {
+  color: var(--global-text-color) !important;
+}
+
+// Apply UMN-like accent to About page links/code,
+// while keeping the custom social line neutral.
+.about-post article a {
+  color: #7a0019 !important;
+}
+
+.about-post article a:hover {
+  color: #5b0013 !important;
+}
+
+.about-post article code {
+  color: #7a0019 !important;
+}
+
+.about-post .profile-contact-inline a {
+  color: var(--global-text-color) !important;
+}
+
+.about-post .profile-contact-inline a:hover {
+  color: #5b0013 !important;
+}
+
+.about-post .publications .links a.btn,
+.about-post .publications .links a.btn:hover {
+  color: var(--global-text-color) !important;
+  border-color: var(--global-text-color) !important;
+}
+
+// Keep section titles and news/post item titles black.
+.about-post article > h2 {
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-post article > h2 a,
+.about-post .news .news-title {
+  color: var(--global-text-color) !important;
+}
+
+.about-post article > h2 a:hover,
+.about-post .news .news-title:hover {
+  color: var(--global-text-color) !important;
+}
+
 .container {
   max-width: v.$max-content-width;
 }
 
-// Profile
+// Profile - social icons below photo
 .profile {
   img {
-    width: 100%;
+    width: 80%;
   }
+
+}
+
+.profile-contact-inline {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+
+  .profile-email-line {
+    margin-bottom: 0.35rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      i {
+        font-size: 0.95rem;
+      }
+
+      .brand-icon-gmail {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .profile-social-links-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 0.2rem;
+  }
+
+  .profile-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    .brand-icon {
+      width: 0.95rem;
+      height: 0.95rem;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .brand-icon-linkedin {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.12rem;
+      background-color: #0a66c2;
+      color: #fff;
+      font-size: 0.68rem;
+      line-height: 1;
+    }
+
+    i {
+      font-size: 0.95rem;
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: underline;
+    }
+  }
+
+  .profile-social-sep {
+    margin: 0 0.45rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.about-inline-social {
+  margin-bottom: 1rem;
 }
 
 // Content layout uses Bootstrap's grid system with responsive columns

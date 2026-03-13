@@ -1,12 +1,15 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post about-post">
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
+        {% if site.chinese_name != blank %}
+          <span class="name-native">({{ site.chinese_name }})</span>
+        {% endif %}
       {% else %}
         {{ site.title }}
       {% endif %}
@@ -22,15 +25,10 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+          {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -38,9 +36,77 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="clearfix">
+      {{ content }}
+      {% if page.social %}
+        {% assign socials = site.data.socials %}
+        <div class="profile-contact-inline about-inline-social mt-3">
+          {% if socials.email %}
+            <div class="profile-email-line">
+              <a href="mailto:{{ socials.email | encode_email }}">
+                <img class="brand-icon brand-icon-gmail" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="" loading="lazy" decoding="async">
+                <span>{{ socials.email | replace: '@', ' [at] ' | replace: '.', ' [dot] ' }}</span>
+              </a>
+            </div>
+          {% endif %}
 
-    <!-- News -->
+          <div class="profile-social-links-line">
+            {% assign social_count = 0 %}
+
+            {% if socials.linkedin %}
+              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if socials.linkedin contains 'http' %}
+                {% assign linkedin_url = socials.linkedin %}
+              {% elsif socials.linkedin contains 'linkedin.com' %}
+                {% assign linkedin_url = socials.linkedin | prepend: 'https://' %}
+              {% else %}
+                {% assign linkedin_url = socials.linkedin | prepend: 'https://www.linkedin.com/in/' %}
+              {% endif %}
+              <a class="profile-social-link" href="{{ linkedin_url }}" target="_blank" rel="noopener noreferrer">
+                <span class="brand-icon brand-icon-linkedin" aria-hidden="true">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </span>
+                <span>LinkedIn</span>
+              </a>
+              {% assign social_count = social_count | plus: 1 %}
+            {% endif %}
+
+            {% if socials.github %}
+              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              <a class="profile-social-link" href="https://github.com/{{ socials.github }}" target="_blank" rel="noopener noreferrer">
+                <img class="brand-icon" src="https://cdn.simpleicons.org/github/181717" alt="" loading="lazy" decoding="async">
+                <span>GitHub</span>
+              </a>
+              {% assign social_count = social_count | plus: 1 %}
+            {% endif %}
+
+            {% if socials.twitter %}
+              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              <a class="profile-social-link" href="https://x.com/{{ socials.twitter }}" target="_blank" rel="noopener noreferrer">
+                <img class="brand-icon" src="https://cdn.simpleicons.org/x/000000" alt="" loading="lazy" decoding="async">
+                <span>X</span>
+              </a>
+              {% assign social_count = social_count | plus: 1 %}
+            {% endif %}
+
+            {% if socials.bluesky %}
+              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if socials.bluesky contains 'http' %}
+                {% assign bluesky_url = socials.bluesky %}
+              {% else %}
+                {% assign bluesky_url = socials.bluesky | prepend: 'https://bsky.app/profile/' %}
+              {% endif %}
+              <a class="profile-social-link" href="{{ bluesky_url }}" target="_blank" rel="noopener noreferrer">
+                <img class="brand-icon" src="https://cdn.simpleicons.org/bluesky/0285FF" alt="" loading="lazy" decoding="async">
+                <span>Bluesky</span>
+              </a>
+              {% assign social_count = social_count | plus: 1 %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
     {% if page.announcements and page.announcements.enabled %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
@@ -48,7 +114,6 @@ layout: default
       {% include news.liquid limit=true %}
     {% endif %}
 
-    <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
         <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
@@ -56,7 +121,6 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
@@ -64,13 +128,8 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
+    {% if site.contact_note != blank %}
+      <div class="contact-note mt-3">{{ site.contact_note }}</div>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
