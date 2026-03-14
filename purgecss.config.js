@@ -4,6 +4,13 @@ module.exports = {
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
   safelist: [
+    "row",
+    "col-sm-6",
+    "col-lg-4",
+    "col-sm",
+    "col-md",
+    "mt-3",
+    "my-5",
     "about-post",
     "name-native",
     "subtitle-school-logo",
