@@ -15,7 +15,7 @@ albums:
       - path: assets/img/misc/ice/5.JPG
       - path: assets/img/misc/ice/3.JPG
       - path: assets/img/misc/ice/6.JPG
-  - name: 窗子以外
+  - name: Outside the Window
     description: "2025.8 Alaska"
     photos:
       - path: assets/img/misc/window/1.JPG
@@ -32,7 +32,16 @@ albums:
       - path: assets/img/misc/yellowstone/3.JPG
       - path: assets/img/misc/yellowstone/4.JPG
       - path: assets/img/misc/yellowstone/5.JPG
-
+  - name: Volcano - Bromo
+    description: "2024.5 Indonesia"
+    photos:
+      - path: assets/img/misc/Volcano/1.JPG
+      - path: assets/img/misc/Volcano/2.JPG
+  - name: Hokkaido & Kamakura
+    description: "2024.1 Japan"
+    photos:
+      - path: assets/img/misc/japan/1.JPG
+      - path: assets/img/misc/japan/2.JPG
 ---
 
 {% for album in page.albums %}
