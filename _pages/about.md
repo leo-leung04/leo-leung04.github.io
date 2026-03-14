@@ -31,13 +31,11 @@ Hi there! I am a senior undergraduate student in Computer Science at
 <a class="about-inline-affiliation-link" href="https://twin-cities.umn.edu/">
   <img class="about-inline-brand-icon about-inline-brand-icon-umn" src="/assets/img/University_of_Minnesota_Logo.svg.png" alt="University of Minnesota logo" loading="lazy" decoding="async">University of Minnesota, Twin Cities</a>.
 Previously, I studied Economics at <a class="about-inline-affiliation-link" href="https://english.scnu.edu.cn/">
-  <img class="about-inline-brand-icon" src="/assets/img/scnu.png" alt="South China Normal University logo" loading="lazy" decoding="async">South China Normal University
-</a>.
+  <img class="about-inline-brand-icon" src="/assets/img/scnu.png" alt="South China Normal University logo" loading="lazy" decoding="async">South China Normal University</a>.
 
 I am currently a research intern in
 <a class="about-inline-affiliation-link" href="https://minnesotanlp.github.io/index.html#people">
-  <img class="about-inline-brand-icon" src="https://www.google.com/s2/favicons?domain=minnesotanlp.github.io&sz=64" alt="Minnesota NLP Group logo" loading="lazy" decoding="async">Minnesota NLP Group
-</a>,
+  <img class="about-inline-brand-icon" src="https://www.google.com/s2/favicons?domain=minnesotanlp.github.io&sz=64" alt="Minnesota NLP Group logo" loading="lazy" decoding="async">Minnesota NLP Group</a>,
 advised by Prof. [Dongyeop Kang](https://dykang.github.io/index.html). My research interests broadly focus on understanding how LLMs can evolve into more capable, adaptive, and interactive systems that can reliably perform complex real-world tasks over long horizons.
 
-Previously, I conducted research in computational biology advised by Prof. [Chad Myers](https://scholar.google.com/citations?user=yKHrbV4AAAAJ&hl=en) and Dr. [Wen Wang](https://scholar.google.com/citations?user=ecWpuBsAAAAJ&hl=en). I also participated in the DFRACS project under the supervision of Prof. [Tianxi Li](https://sites.google.com/view/tianxili-homepage/home).
+Previously, I conducted research in computational biology advised by Prof. [Chad Myers](https://scholar.google.com/citations?user=yKHrbV4AAAAJ&hl=en) and Dr. [Wen Wang](https://scholar.google.com/citations?user=ecWpuBsAAAAJ&hl=en). I also participated in the [DFRACS project](https://cla.umn.edu/undergraduate-students/academics/research-opportunities/deans-first-year-research-creative-scholars) under the supervision of Prof. [Tianxi Li](https://sites.google.com/view/tianxili-homepage/home).

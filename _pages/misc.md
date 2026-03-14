@@ -35,8 +35,8 @@ albums:
   - name: Volcano - Bromo
     description: "2024.5 Indonesia"
     photos:
-      - path: assets/img/misc/Volcano/1.JPG
-      - path: assets/img/misc/Volcano/2.JPG
+      - path: assets/img/misc/volcano/1.JPG
+      - path: assets/img/misc/volcano/2.JPG
   - name: Hokkaido & Kamakura
     description: "2024.1 Japan"
     photos:
