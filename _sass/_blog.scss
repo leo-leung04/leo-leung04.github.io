@@ -4,13 +4,89 @@
 
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
-  text-align: center;
+  text-align: left;
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.2rem;
+
+  .header-bar-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-family: "Lora", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .blog-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    padding-bottom: 0.3rem;
+  }
+
+  .blog-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    i {
+      position: absolute;
+      left: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--global-text-color-light);
+      pointer-events: none;
+    }
+
+    input {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.82rem;
+      padding: 0.4rem 0.6rem 0.4rem 1.8rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 6px;
+      background: var(--global-bg-color);
+      color: var(--global-text-color);
+      width: 160px;
+      outline: none;
+      transition: border-color 150ms, width 200ms;
+
+      &::placeholder {
+        color: var(--global-text-color-light);
+      }
+
+      &:focus {
+        border-color: var(--global-theme-color);
+        width: 200px;
+      }
+    }
+  }
+
+  #blog-category-select {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.82rem;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    outline: none;
+    cursor: pointer;
+    transition: border-color 150ms;
+
+    &:focus {
+      border-color: var(--global-theme-color);
+    }
   }
 }
 
@@ -45,36 +121,92 @@
   padding: 0;
 
   li {
-    border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding: 0.9rem 0.5rem;
+    margin: 0 -0.5rem;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 150ms ease;
 
-    .post-meta {
-      color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      margin-bottom: 0;
+    &:hover {
+      background: var(--global-code-bg-color);
     }
 
-    .post-tags {
-      color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      padding-top: 0.25rem;
-      padding-bottom: 0;
+    &:hover .post-title {
+      color: #7a0019;
     }
 
-    a {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .post-entry {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .post-entry-main {
+    flex: 1;
+    min-width: 0;
+
+    .post-title {
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--global-text-color);
       text-decoration: none;
+      transition: color 150ms;
 
       &:hover {
         color: var(--global-theme-color);
       }
+
+      i {
+        opacity: 0.35;
+        margin-left: 0.15rem;
+        font-size: 0.65rem;
+        vertical-align: baseline;
+      }
+
+      &:hover i {
+        opacity: 0.6;
+      }
     }
 
-    mjx-container[jax="CHTML"][display="true"] {
-      display: unset;
+    .post-description {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--global-text-color-light);
+      margin-top: 0.15rem;
+      line-height: 1.45;
     }
+  }
+
+  .post-entry-meta {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+  }
+
+  .post-entry-tags {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .post-entry-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 }
 

@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
+title: publications
 description: "* indicates equal contribution."
 nav: true
-nav_order: 2
+nav_order: 1
 ---
 
 <div class="publications">

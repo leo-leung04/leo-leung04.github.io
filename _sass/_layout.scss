@@ -122,6 +122,29 @@ body.sticky-bottom-footer {
   border-color: var(--global-text-color) !important;
 }
 
+// Page header title style (publications, projects, etc.) — exclude about page
+.post-header {
+  padding-top: 1rem;
+
+  .post-title {
+    font-family: "Lora", serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: left;
+  }
+}
+
+.about-post .post-header {
+  padding-top: 0;
+
+  .post-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
 // Keep section titles and news/post item titles black.
 .about-post article > h2 {
   border-bottom: 1px solid var(--global-divider-color);

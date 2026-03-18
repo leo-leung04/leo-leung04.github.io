@@ -2,18 +2,10 @@
 layout: default
 permalink: /blog/
 title: blog
-nav: false
-nav_order: 1
+nav: true
+nav_order: 3
 pagination:
-  enabled: true
-  collection: posts
-  permalink: /page/:num/
-  per_page: 5
-  sort_field: date
-  sort_reverse: true
-  trail:
-    before: 1 # The number of links before the current page
-    after: 3 # The number of links after the current page
+  enabled: false
 ---
 
 <div class="post">
@@ -24,8 +16,27 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
+    <div class="header-bar-top">
+      <div>
+        <h1>{{ site.blog_name }}</h1>
+        <h2>{{ site.blog_description }}</h2>
+      </div>
+      <div class="blog-controls">
+        <div class="blog-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="blog-search-input" placeholder="Search posts..." autocomplete="off">
+        </div>
+        <select id="blog-category-select">
+          <option value="all">All topics</option>
+          {% assign all_tags = site.posts | map: "tags" | join: "," | split: "," | uniq | sort %}
+          {% for tag in all_tags %}
+            {% if tag != "" %}
+              <option value="{{ tag }}">{{ tag }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+    </div>
   </div>
   {% endif %}
 
@@ -120,69 +131,27 @@ pagination:
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
 
-    <li>
-
-{% if post.thumbnail %}
-
-<div class="row">
-          <div class="col-sm-9">
-{% endif %}
-        <h3>
-        {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-          <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        {% else %}
-          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
-        {% endif %}
-      </h3>
-      <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
-        {% if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {% endif %}
-      </p>
-      <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | relative_url }}">
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-
+    <li class="post-item-clickable" data-title="{{ post.title | downcase }}" data-description="{{ post.description | downcase }}" data-tags="{{ post.tags | join: ',' | downcase }}" data-url="{% if post.redirect == blank %}{{ post.url | relative_url }}{% elsif post.redirect contains '://' %}{{ post.redirect }}{% else %}{{ post.redirect | relative_url }}{% endif %}" {% if post.redirect contains '://' %}data-external="true"{% endif %}>
+      <div class="post-entry">
+        <div class="post-entry-main">
+          <span class="post-title">{{ post.title }}
+            {% if post.redirect contains '://' %}
+              <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
+            {% endif %}
+          </span>
+          <span class="post-description">{{ post.description }}</span>
+        </div>
+        <div class="post-entry-meta">
+          <span>{{ post.date | date: '%b %d, %Y' }}</span>
           {% if tags != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
+            <div class="post-entry-tags">
+              {% for tag in post.tags %}
+                <span class="post-entry-tag">{{ tag }}</span>
               {% endfor %}
+            </div>
           {% endif %}
-
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
-              {% endfor %}
-          {% endif %}
-    </p>
-
-{% if post.thumbnail %}
-
-</div>
-
-  <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
-  </div>
-</div>
-{% endif %}
+        </div>
+      </div>
     </li>
 
     {% endfor %}
@@ -194,3 +163,45 @@ pagination:
 {% endif %}
 
 </div>
+
+<script>
+(function() {
+  const searchInput = document.getElementById('blog-search-input');
+  const categorySelect = document.getElementById('blog-category-select');
+  const posts = document.querySelectorAll('.post-list li');
+
+  function filterPosts() {
+    const query = searchInput.value.toLowerCase().trim();
+    const category = categorySelect.value.toLowerCase();
+
+    posts.forEach(function(post) {
+      const title = post.getAttribute('data-title') || '';
+      const desc = post.getAttribute('data-description') || '';
+      const tags = post.getAttribute('data-tags') || '';
+
+      const matchesSearch = !query || title.includes(query) || desc.includes(query);
+      const matchesCategory = category === 'all' || tags.split(',').indexOf(category) !== -1;
+
+      post.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+    });
+  }
+
+  if (searchInput) searchInput.addEventListener('input', filterPosts);
+  if (categorySelect) categorySelect.addEventListener('change', filterPosts);
+
+  // Make entire post row clickable
+  document.querySelectorAll('.post-item-clickable').forEach(function(item) {
+    item.addEventListener('click', function() {
+      var url = item.getAttribute('data-url');
+      var isExternal = item.getAttribute('data-external');
+      if (url) {
+        if (isExternal) {
+          window.open(url, '_blank');
+        } else {
+          window.location.href = url;
+        }
+      }
+    });
+  });
+})();
+</script>
