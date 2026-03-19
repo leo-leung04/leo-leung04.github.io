@@ -37,15 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/misc/";
           },
-        },{id: "post-test",
+        },{id: "post-nano-learn-to-build-nanogpt",
         
-          title: 'test <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '[nano] Learn to Build nanoGPT <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "This is a test blog post.",
+        description: "Learn to build nanoGPT w/ Andrej Karpathy",
         section: "Posts",
         handler: () => {
           
-            window.open("https://www.notion.so/your-page-id-here", "_blank");
+            window.open("https://colorful-sunflower-ebf.notion.site/nano-Learn-to-Build-nanoGPT-3285e7de737080e69937c8b7febb1fb2?source=copy_link", "_blank");
           
         },
       },{id: "books-the-godfather",
