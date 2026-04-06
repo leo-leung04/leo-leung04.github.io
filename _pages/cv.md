@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 2
-redirect: /assets/pdf/Jingcheng_Liang_cv.pdf
+redirect: /assets/pdf/Jingcheng_Liang_research_CV.pdf
 ---
 <!doctype html>
 <html>
