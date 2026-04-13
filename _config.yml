@@ -2,14 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Jingcheng Liang # the website title (if blank, full name will be used instead)
 first_name: Jingcheng
 middle_name: ""
 last_name: Liang
 chinese_name: "梁景程" # optional, e.g. "梁景程" - shown after name like "Jingcheng Liang 梁景程"
 contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Jingcheng Liang's personal website, where I share my research, projects, blog posts, and thoughts.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
