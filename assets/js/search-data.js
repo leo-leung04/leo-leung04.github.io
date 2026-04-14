@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/misc/";
           },
-        },{id: "post-algorithm-genetic-algorithm",
+        },{id: "post-algorithm-multi-armed-bandits-and-how-to-solve-them",
+        
+          title: '[algorithm] Multi-Armed Bandits and How to Solve Them <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Multi-armed bandit problem and three classic algorithms that solve it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://colorful-sunflower-ebf.notion.site/algorithm-Multi-Armed-Bandits-and-How-to-Solve-Them-3425e7de73708061aaa8d39ee3047af4?source=copy_link", "_blank");
+          
+        },
+      },{id: "post-algorithm-genetic-algorithm",
         
           title: '[algorithm] Genetic Algorithm <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
