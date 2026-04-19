@@ -59,17 +59,6 @@ ninja.data = [{
             window.open("https://colorful-sunflower-ebf.notion.site/algorithm-Genetic-Algorithm-3405e7de737080c8a766c8d6c91e8a18?source=copy_link", "_blank");
           
         },
-      },{id: "post-leetcode-neetcode-lang-zh",
-        
-          title: '[leetcode] NeetCode (lang: zh) <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "Most of these solutions were written in Chinese. A LeetCode Rookie, just to record my progress. Will be replaced w/ a better ver. in the future",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://colorful-sunflower-ebf.notion.site/leetcode-NeetCode-lang-zh-32a5e7de73708002bce0d121ffde932b?source=copy_link", "_blank");
-          
-        },
       },{id: "post-nano-learn-to-build-nanogpt",
         
           title: '[nano] Learn to Build nanoGPT <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
