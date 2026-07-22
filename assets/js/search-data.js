@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/misc/";
           },
-        },{id: "post-course-note-for-ee5239-intro-to-non-linear-optimization",
+        },{id: "post-note-you-and-your-research-richard-hamming",
+        
+          title: '[note] You and Your Research - Richard Hamming <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "Hamming, You and Your Research",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://app.notion.com/p/note-You-and-Your-Research-Hamming-3a55e7de73708083a879f17b118715d4", "_blank");
+          
+        },
+      },{id: "post-course-note-for-ee5239-intro-to-non-linear-optimization",
         
           title: 'Course note for EE5239: Intro to Non-linear Optimization <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
@@ -68,17 +79,6 @@ ninja.data = [{
         handler: () => {
           
             window.open("https://colorful-sunflower-ebf.notion.site/algorithm-Genetic-Algorithm-3405e7de737080c8a766c8d6c91e8a18?source=copy_link", "_blank");
-          
-        },
-      },{id: "post-nano-learn-to-build-nanogpt",
-        
-          title: '[nano] Learn to Build nanoGPT <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "Learn to build nanoGPT w/ Andrej Karpathy",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://colorful-sunflower-ebf.notion.site/nano-Learn-to-Build-nanoGPT-3285e7de737080e69937c8b7febb1fb2?source=copy_link", "_blank");
           
         },
       },{id: "books-the-godfather",
