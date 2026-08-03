@@ -6,6 +6,28 @@ description: A collection of photos I've taken.
 nav: true
 nav_order: 9
 albums:
+  - name: La Jolla
+    description: "2026.7 San Diego"
+    photos:
+      - path: assets/img/misc/ljl/1.JPG
+      - path: assets/img/misc/ljl/2.JPG
+      - path: assets/img/misc/ljl/3.JPG
+      - path: assets/img/misc/ljl/4.JPG
+      - path: assets/img/misc/ljl/5.JPG
+  - name: London
+    description: "2026.6 UK"
+    photos:
+      - path: assets/img/misc/ld/1.JPG
+      - path: assets/img/misc/ld/2.JPG
+      - path: assets/img/misc/ld/3.JPG
+      - path: assets/img/misc/ld/4.JPG
+      - path: assets/img/misc/ld/5.JPG
+  - name: White Cliffs
+    description: "2026.6 UK"
+    photos:
+      - path: assets/img/misc/wc/1.JPG
+      - path: assets/img/misc/wc/2.JPG
+      - path: assets/img/misc/wc/3.JPG
   - name: Ice
     description: "2025.8 Alaska"
     photos:
