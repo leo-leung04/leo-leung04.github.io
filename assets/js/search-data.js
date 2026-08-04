@@ -17,7 +17,7 @@ ninja.data = [{
             window.location.href = "/publications/";
           },
         },{id: "nav-cv",
-          title: "CV",
+          title: "cv",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -31,17 +31,17 @@ ninja.data = [{
             window.location.href = "/blog/";
           },
         },{id: "nav-misc",
-          title: "Misc.",
-          description: "A collection of photos I&#39;ve taken.",
+          title: "misc.",
+          description: "a collection of photos I&#39;ve taken.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/misc/";
           },
         },{id: "post-note-you-and-your-research-richard-hamming",
         
-          title: '[note] You and Your Research - Richard Hamming <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '[note] you and your research - richard hamming <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "Hamming, You and Your Research",
+        description: "hamming, you and your research",
         section: "Posts",
         handler: () => {
           
@@ -50,9 +50,9 @@ ninja.data = [{
         },
       },{id: "post-course-note-for-ee5239-intro-to-non-linear-optimization",
         
-          title: 'Course note for EE5239: Intro to Non-linear Optimization <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: 'course note for ee5239: intro to non-linear optimization <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "A course note for Intro to Non-linear Optimization",
+        description: "a course note for intro to non-linear optimization",
         section: "Posts",
         handler: () => {
           
@@ -61,9 +61,9 @@ ninja.data = [{
         },
       },{id: "post-algorithm-multi-armed-bandits-and-how-to-solve-them",
         
-          title: '[algorithm] Multi-Armed Bandits and How to Solve Them <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '[algorithm] multi-armed bandits and how to solve them <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "Multi-armed bandit problem and three classic algorithms that solve it.",
+        description: "multi-armed bandit problem and three classic algorithms that solve it.",
         section: "Posts",
         handler: () => {
           
@@ -72,9 +72,9 @@ ninja.data = [{
         },
       },{id: "post-algorithm-genetic-algorithm",
         
-          title: '[algorithm] Genetic Algorithm <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          title: '[algorithm] genetic algorithm <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
-        description: "An introduction to Genetic Algorithms.",
+        description: "an introduction to genetic algorithms.",
         section: "Posts",
         handler: () => {
           
@@ -180,7 +180,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=d3iwODYAAAAJ", "_blank");
         },
       },{
         id: 'social-github',
@@ -199,13 +199,6 @@ ninja.data = [{
       },{
         id: 'social-twitter',
         title: 'Twitter',
-        section: 'Socials',
-        handler: () => {
-          window.open("", "_blank");
-        },
-      },{
-        id: 'social-bluesky',
-        title: 'Bluesky',
         section: 'Socials',
         handler: () => {
           window.open("", "_blank");
