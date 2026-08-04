@@ -7,6 +7,9 @@ subtitle: CS UG @ <img class='subtitle-school-logo subtitle-school-logo-umn' src
 profile:
   align: right
   image: person_photo.jpg
+  hover_images:
+    - tea.png
+    - mess.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>

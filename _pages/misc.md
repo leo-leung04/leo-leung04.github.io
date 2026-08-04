@@ -66,6 +66,8 @@ albums:
       - path: assets/img/misc/japan/2.JPG
 ---
 
+<hr class="my-3">
+
 {% for album in page.albums %}
 {% unless forloop.first %}<hr class="my-5">{% endunless %}
 ## {{ album.name }}

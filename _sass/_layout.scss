@@ -29,6 +29,12 @@ body {
   }
 }
 
+::selection {
+  color: var(--selection-text-color, #1a1a1a);
+  text-shadow: none;
+  background-color: var(--selection-background-color, #a8b0a0);
+}
+
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 57px;
@@ -189,10 +195,128 @@ body.sticky-bottom-footer {
 
 // Profile - social icons below photo
 .profile {
+  .profile-palette {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.3rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .profile-image-swap {
+    position: relative;
+    width: 80%;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .profile-hover-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  .profile-palette-swatch {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    width: 1.125rem;
+    height: 0.625rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.125rem;
+    appearance: none;
+    background-color: var(--profile-palette-color);
+    cursor: pointer;
+    transition:
+      outline-color 120ms ease,
+      transform 120ms ease;
+
+    &::after {
+      position: absolute;
+      bottom: calc(100% + 0.45rem);
+      left: 50%;
+      z-index: 3;
+      padding: 0.18rem 0.35rem;
+      border-radius: 0.2rem;
+      color: #fff;
+      background-color: rgb(26 26 26 / 92%);
+      content: attr(data-color);
+      font-size: 0.68rem;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, 0.15rem);
+      transition:
+        opacity 120ms ease,
+        transform 120ms ease;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    &:focus-visible {
+      outline: 1.5px solid var(--global-text-color);
+      outline-offset: 2px;
+    }
+
+    &.is-selected {
+      outline: 1px solid var(--global-text-color);
+      outline-offset: 1px;
+      transform: scale(1.04);
+    }
+
+    &:nth-child(1) {
+      --profile-palette-color: #a8b0a0;
+    }
+
+    &:nth-child(2) {
+      --profile-palette-color: #c0a49a;
+    }
+
+    &:nth-child(3) {
+      --profile-palette-color: #d1c3a5;
+    }
+
+    &:nth-child(4) {
+      --profile-palette-color: #87979d;
+    }
+
+    &:nth-child(5) {
+      --profile-palette-color: #b5a5b1;
+    }
+  }
+
   img {
     width: 80%;
   }
+}
 
+@media (hover: hover) and (pointer: fine) {
+  .profile-image-swap:hover {
+    figure {
+      opacity: 0;
+    }
+
+    .profile-hover-image.is-active {
+      opacity: 1;
+    }
+  }
 }
 
 .profile-contact-inline {

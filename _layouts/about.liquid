@@ -21,6 +21,13 @@ layout: default
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
+          <div class="profile-palette" role="group" aria-label="Text selection highlight colors">
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+          </div>
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
@@ -28,7 +35,20 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-          {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
+          <div class="profile-image-swap">
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
+            {% for hover_image in page.profile.hover_images %}
+              {% assign profile_hover_image_path = hover_image | prepend: 'assets/img/' %}
+              <img
+                class="{{ profile_image_class }} profile-hover-image"
+                src="{{ profile_hover_image_path | relative_url | bust_file_cache }}"
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+                decoding="async"
+              >
+            {% endfor %}
+          </div>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -138,3 +158,7 @@ layout: default
     {% endif %}
   </article>
 </div>
+
+{% if page.profile.hover_images %}
+  <script defer src="{{ '/assets/js/profile-photo-hover.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
