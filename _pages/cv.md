@@ -1,7 +1,7 @@
 ---
 layout: none
 permalink: /cv/
-title: CV
+title: cv
 nav: true
 nav_order: 2
 redirect: /assets/pdf/Jingcheng_Liang_research_CV.pdf

@@ -1,35 +1,35 @@
 ---
 layout: page
-title: Misc.
+title: misc.
 permalink: /misc/
-description: A collection of photos I've taken.
+description: a collection of photos I've taken.
 nav: true
 nav_order: 9
 albums:
-  - name: La Jolla
-    description: "2026.7 San Diego"
+  - name: la jolla
+    description: "2026.7 @san diego"
     photos:
       - path: assets/img/misc/ljl/1.JPG
       - path: assets/img/misc/ljl/2.JPG
       - path: assets/img/misc/ljl/3.JPG
       - path: assets/img/misc/ljl/4.JPG
       - path: assets/img/misc/ljl/5.JPG
-  - name: London
-    description: "2026.6 UK"
+  - name: london
+    description: "2026.6 @uk"
     photos:
       - path: assets/img/misc/ld/1.JPG
       - path: assets/img/misc/ld/2.JPG
       - path: assets/img/misc/ld/3.JPG
       - path: assets/img/misc/ld/4.JPG
       - path: assets/img/misc/ld/5.JPG
-  - name: White Cliffs
-    description: "2026.6 UK"
+  - name: white cliffs
+    description: "2026.6 @uk"
     photos:
       - path: assets/img/misc/wc/1.JPG
       - path: assets/img/misc/wc/2.JPG
       - path: assets/img/misc/wc/3.JPG
-  - name: Ice
-    description: "2025.8 Alaska"
+  - name: ice
+    description: "2025.8 @alaska"
     photos:
       - path: assets/img/misc/ice/1.JPG
       - path: assets/img/misc/ice/2.JPG
@@ -37,8 +37,8 @@ albums:
       - path: assets/img/misc/ice/5.JPG
       - path: assets/img/misc/ice/3.JPG
       - path: assets/img/misc/ice/6.JPG
-  - name: Outside the Window
-    description: "2025.8 Alaska"
+  - name: outside the window
+    description: "2025.8 @alaska"
     photos:
       - path: assets/img/misc/window/1.JPG
       - path: assets/img/misc/window/2.JPG
@@ -46,21 +46,21 @@ albums:
       - path: assets/img/misc/window/5.JPG
       - path: assets/img/misc/window/6.JPG
       - path: assets/img/misc/window/7.JPG
-  - name: Yellowstone
-    description: "2025.8 Yellowstone"
+  - name: yellowstone
+    description: "2025.8 @yellowstone"
     photos:
       - path: assets/img/misc/yellowstone/1.JPG
       - path: assets/img/misc/yellowstone/2.JPG
       - path: assets/img/misc/yellowstone/3.JPG
       - path: assets/img/misc/yellowstone/4.JPG
       - path: assets/img/misc/yellowstone/5.JPG
-  - name: Volcano - Bromo
-    description: "2024.5 Indonesia"
+  - name: bromo
+    description: "2024.5 @indonesia"
     photos:
       - path: assets/img/misc/volcano/1.JPG
       - path: assets/img/misc/volcano/2.JPG
-  - name: Hokkaido & Kamakura
-    description: "2024.1 Japan"
+  - name: hokkaido & kamakura
+    description: "2024.1 @japan"
     photos:
       - path: assets/img/misc/japan/1.JPG
       - path: assets/img/misc/japan/2.JPG

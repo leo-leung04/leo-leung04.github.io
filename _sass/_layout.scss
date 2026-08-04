@@ -6,6 +6,15 @@
 
 body {
   padding-bottom: 70px;
+  font-family:
+    "Google Sans Flex",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
@@ -138,10 +147,15 @@ body.sticky-bottom-footer {
   padding-top: 0;
 
   .post-title {
-    font-family: "Roboto", sans-serif;
+    font-family: "Google Sans Flex", sans-serif;
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 200;
+    letter-spacing: -0.02em;
     text-align: left;
+
+    .font-weight-bold {
+      font-weight: 600 !important;
+    }
   }
 }
 
@@ -150,6 +164,12 @@ body.sticky-bottom-footer {
   border-bottom: 1px solid var(--global-divider-color);
   padding-bottom: 0.25rem;
   margin-bottom: 0.8rem;
+  font-size: 1.75rem;
+  font-weight: 350;
+}
+
+.about-post .news table th {
+  font-weight: 400;
 }
 
 .about-post article > h2 a,

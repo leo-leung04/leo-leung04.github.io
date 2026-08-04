@@ -14,6 +14,7 @@ profile:
   #   <p>Your City, State 12345</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
+personal: My favorite ice cream spot in Minneapolis is [Pumphouse Creamery](https://maps.app.goo.gl/eAfnqKcuhaaDoF9v9). I regard [Jane Goodall](https://en.wikipedia.org/wiki/Jane_Goodall) as my role model.
 social: true # includes social icons at the bottom of the page
 
 announcements:

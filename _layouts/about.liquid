@@ -89,16 +89,16 @@ layout: default
               {% assign social_count = social_count | plus: 1 %}
             {% endif %}
 
-            {% if socials.bluesky %}
+            {% if socials.scholar_userid %}
               {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
-              {% if socials.bluesky contains 'http' %}
-                {% assign bluesky_url = socials.bluesky %}
-              {% else %}
-                {% assign bluesky_url = socials.bluesky | prepend: 'https://bsky.app/profile/' %}
-              {% endif %}
-              <a class="profile-social-link" href="{{ bluesky_url }}" target="_blank" rel="noopener noreferrer">
-                <img class="brand-icon" src="https://cdn.simpleicons.org/bluesky/0285FF" alt="" loading="lazy" decoding="async">
-                <span>Bluesky</span>
+              <a
+                class="profile-social-link"
+                href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}&amp;hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="brand-icon" src="{{ '/assets/img/google-scholar.png' | relative_url }}" alt="" loading="lazy" decoding="async">
+                <span>Google Scholar</span>
               </a>
               {% assign social_count = social_count | plus: 1 %}
             {% endif %}
@@ -108,9 +108,7 @@ layout: default
     </div>
 
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2>news</h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
@@ -122,10 +120,13 @@ layout: default
     {% endif %}
 
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
+      <h2>selected publications</h2>
       {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% if page.personal != blank %}
+      <h2>personal</h2>
+      <div class="personal">{{ page.personal | markdownify }}</div>
     {% endif %}
 
     {% if site.contact_note != blank %}
