@@ -8,8 +8,10 @@ profile:
   align: right
   image: person_photo.jpg
   hover_images:
-    - tea.png
-    - mess.png
+    - tea.webp
+    - mess.webp
+    - sun.webp
+    - cloud.webp
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
