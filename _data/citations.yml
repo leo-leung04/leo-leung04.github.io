@@ -1,7 +1,7 @@
 metadata:
-  last_updated: '2026-08-17'
+  last_updated: '2026-08-26'
 papers:
   d3iwODYAAAAJ:u5HHmVD_uO8C:
-    citations: 3
+    citations: 5
     title: 'Abstain-R1: Calibrated Abstention and Post-Refusal Clarification via Verifiable RL'
     year: '2026'
