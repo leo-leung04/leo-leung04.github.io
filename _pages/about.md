@@ -42,10 +42,10 @@ Previously, I studied Economics at <a class="about-inline-affiliation-link" href
 I am currently a research intern in
 <a class="about-inline-affiliation-link" href="https://minnesotanlp.github.io/index.html#people">
   <img class="about-inline-brand-icon" src="https://www.google.com/s2/favicons?domain=minnesotanlp.github.io&sz=64" alt="Minnesota NLP Group logo" loading="lazy" decoding="async">Minnesota NLP Group</a>,
-advised by Prof. [Dongyeop Kang](https://dykang.github.io/index.html). I am broadly interested in AI alignment, human–AI interaction, and multi-agent collaboration, with a focus on building reliable, collaborative, and adaptive language technologies.
-
+advised by Prof. [Dongyeop Kang](https://dykang.github.io/index.html). I am broadly interested in building and assessing capable, reliable, and prosocial digital agents that can tackle open-ended, complex tasks in the real world and enhance human well-being.
+<!-- 
 - **Human → LM:** How can we understand, evaluate, and oversee language models as their capabilities outpace our ability to reliably assess them?
 - **LM → Human:** How can language models adapt to diverse human intentions, capabilities, and values to become better collaborators?
-- **LM → LM:** What new behaviors emerge when language models collaborate, and how can we design interactions that shape these collective dynamics?
+- **LM → LM:** What new behaviors emerge when language models collaborate, and how can we design interactions that shape these collective dynamics? -->
 
 Previously, I conducted research in computational biology advised by Prof. [Chad Myers](https://scholar.google.com/citations?user=yKHrbV4AAAAJ&hl=en) and Dr. [Wen Wang](https://scholar.google.com/citations?user=ecWpuBsAAAAJ&hl=en). I also participated in the [DFRACS project](https://cla.umn.edu/undergraduate-students/academics/research-opportunities/deans-first-year-research-creative-scholars) under the supervision of Prof. [Tianxi Li](https://sites.google.com/view/tianxili-homepage/home).
