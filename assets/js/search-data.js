@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "nav-blog",
           title: "blog",
           description: "",
@@ -36,6 +29,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/misc/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
           },
         },{id: "post-note-you-and-your-research-richard-hamming",
         
@@ -86,11 +86,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-join-minnesota-nlp-group-as-research-intern",
-          title: 'Join    Minnesota NLP Group  as research intern.',
+            },},{id: "news-joined-minnesota-nlp-group-as-a-research-intern",
+          title: 'Joined Minnesota NLP Group as a research intern.',
           description: "",
-          section: "News",},{id: "news-our-papers-was-accepted-to-findings-of-acl-2026",
-          title: 'Our papers was accepted to Findings of ACL 2026.',
+          section: "News",},{id: "news-our-paper-was-accepted-to-findings-of-acl-2026",
+          title: 'Our paper was accepted to Findings of ACL 2026.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
