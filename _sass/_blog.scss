@@ -17,9 +17,10 @@
 
   h1 {
     color: var(--global-theme-color);
-    font-family: "Lora", serif;
+    font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   h2 {
@@ -59,7 +60,9 @@
       color: var(--global-text-color);
       width: 160px;
       outline: none;
-      transition: border-color 150ms, width 200ms;
+      transition:
+        border-color 150ms,
+        width 200ms;
 
       &::placeholder {
         color: var(--global-text-color-light);

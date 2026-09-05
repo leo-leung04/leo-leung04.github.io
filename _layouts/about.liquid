@@ -8,7 +8,7 @@ layout: default
         <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
         {{ site.last_name }}
         {% if site.chinese_name != blank %}
-          <span class="name-native">({{ site.chinese_name }})</span>
+          <span class="name-native">{{ site.chinese_name }}</span>
         {% endif %}
       {% else %}
         {{ site.title }}
@@ -21,13 +21,6 @@ layout: default
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
         {% if page.profile.image %}
-          <div class="profile-palette" role="group" aria-label="Text selection highlight colors">
-            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
-            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
-            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
-            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
-            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
-          </div>
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
@@ -49,6 +42,13 @@ layout: default
               >
             {% endfor %}
           </div>
+          <div class="profile-palette" role="group" aria-label="Text selection highlight colors">
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+            <button class="profile-palette-swatch" type="button" aria-pressed="false"></button>
+          </div>
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -64,7 +64,13 @@ layout: default
           {% if socials.email %}
             <div class="profile-email-line">
               <a href="mailto:{{ socials.email | encode_email }}">
-                <img class="brand-icon brand-icon-gmail" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="" loading="lazy" decoding="async">
+                <img
+                  class="brand-icon brand-icon-gmail"
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                >
                 <span>{{ socials.email | replace: '@', ' [at] ' | replace: '.', ' [dot] ' }}</span>
               </a>
             </div>
@@ -74,7 +80,9 @@ layout: default
             {% assign social_count = 0 %}
 
             {% if socials.linkedin %}
-              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if social_count > 0 -%}
+                <span class="profile-social-sep">/</span>
+              {%- endif %}
               {% if socials.linkedin contains 'http' %}
                 {% assign linkedin_url = socials.linkedin %}
               {% elsif socials.linkedin contains 'linkedin.com' %}
@@ -92,7 +100,9 @@ layout: default
             {% endif %}
 
             {% if socials.github %}
-              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if social_count > 0 -%}
+                <span class="profile-social-sep">/</span>
+              {%- endif %}
               <a class="profile-social-link" href="https://github.com/{{ socials.github }}" target="_blank" rel="noopener noreferrer">
                 <img class="brand-icon" src="https://cdn.simpleicons.org/github/181717" alt="" loading="lazy" decoding="async">
                 <span>GitHub</span>
@@ -101,7 +111,9 @@ layout: default
             {% endif %}
 
             {% if socials.twitter %}
-              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if social_count > 0 -%}
+                <span class="profile-social-sep">/</span>
+              {%- endif %}
               <a class="profile-social-link" href="https://x.com/{{ socials.twitter }}" target="_blank" rel="noopener noreferrer">
                 <img class="brand-icon" src="https://cdn.simpleicons.org/x/000000" alt="" loading="lazy" decoding="async">
                 <span>X</span>
@@ -110,7 +122,9 @@ layout: default
             {% endif %}
 
             {% if socials.scholar_userid %}
-              {% if social_count > 0 %}<span class="profile-social-sep">/</span>{% endif %}
+              {% if social_count > 0 -%}
+                <span class="profile-social-sep">/</span>
+              {%- endif %}
               <a
                 class="profile-social-link"
                 href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}&amp;hl=en"
@@ -128,7 +142,7 @@ layout: default
     </div>
 
     {% if page.announcements and page.announcements.enabled %}
-      <h2>news</h2>
+      <h2>News</h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
@@ -140,7 +154,7 @@ layout: default
     {% endif %}
 
     {% if page.selected_papers %}
-      <h2>selected publications</h2>
+      <h2>Selected publications</h2>
       {% include selected_papers.liquid %}
     {% endif %}
 

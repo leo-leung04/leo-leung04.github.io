@@ -72,7 +72,9 @@ albums:
 
 {% for album in page.albums %}
 {% unless forloop.first %}<hr class="my-5">{% endunless %}
+
 ## {{ album.name }}
+
 {% if album.description %}
 {{ album.description }}
 {% endif %}

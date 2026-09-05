@@ -49,7 +49,7 @@ body.sticky-bottom-footer {
   height: 1em;
   width: auto;
   max-width: 2.2em;
-  margin: 0 0.0em 0 0.12em;
+  margin: 0 0em 0 0.12em;
   vertical-align: -0.15em;
 }
 
@@ -88,40 +88,40 @@ body.sticky-bottom-footer {
 .about-post .post-header .post-title .name-native {
   display: inline-block;
   margin-left: 0.3rem;
-  font-size: 0.48em;
+  font-size: 0.55em;
   line-height: 1.1;
   position: static;
   font-weight: 400;
   letter-spacing: 0.005em;
   color: #444;
-  font-family: "Songti SC", "STSong", "SimSun", "Microsoft YaHei", serif;
+  font-family: "Lora", "Songti SC", "STSong", "SimSun", "Microsoft YaHei", serif;
   white-space: nowrap;
 }
 
 .post-header .desc a {
-  color: #7a0019;
+  color: #8a6fa8;
 }
 
 .post-header .desc a:hover {
-  color: #5b0013;
+  color: #695080;
 }
 
 .about-post .clearfix > p {
   color: var(--global-text-color) !important;
 }
 
-// Apply UMN-like accent to About page links/code,
+// Apply a lilac purple accent to About page links/code,
 // while keeping the custom social line neutral.
 .about-post article a {
-  color: #7a0019 !important;
+  color: #8a6fa8 !important;
 }
 
 .about-post article a:hover {
-  color: #5b0013 !important;
+  color: #695080 !important;
 }
 
 .about-post article code {
-  color: #7a0019 !important;
+  color: #8a6fa8 !important;
 }
 
 .about-post .profile-contact-inline a {
@@ -129,7 +129,7 @@ body.sticky-bottom-footer {
 }
 
 .about-post .profile-contact-inline a:hover {
-  color: #5b0013 !important;
+  color: #695080 !important;
 }
 
 .about-post .publications .links a.btn,
@@ -143,9 +143,10 @@ body.sticky-bottom-footer {
   padding-top: 1rem;
 
   .post-title {
-    font-family: "Lora", serif;
+    font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     text-align: left;
   }
 }
@@ -154,29 +155,44 @@ body.sticky-bottom-footer {
   padding-top: 0;
 
   .post-title {
-    font-family: "Google Sans Flex", sans-serif;
+    font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
     font-size: 2.5rem;
-    font-weight: 200;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     text-align: left;
 
     .font-weight-bold {
-      font-weight: 600 !important;
+      font-weight: 400 !important;
     }
   }
 }
 
 // Keep section titles and news/post item titles black.
 .about-post article > h2 {
+  font-family: "Source Serif 4", "Iowan Old Style", Georgia, serif;
   border-bottom: 1px solid var(--global-divider-color);
   padding-bottom: 0.25rem;
+  margin-top: 1.75rem;
   margin-bottom: 0.8rem;
   font-size: 1.75rem;
-  font-weight: 350;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .about-post .news table th {
   font-weight: 400;
+}
+
+.news .table .news-date {
+  width: 8.75rem;
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.about-post .news .table th,
+.about-post .news .table td {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 
 .about-post article > h2 a,
@@ -196,16 +212,17 @@ body.sticky-bottom-footer {
 // Profile - social icons below photo
 .profile {
   .profile-palette {
-    width: 80%;
+    width: 74%;
     display: flex;
     justify-content: flex-end;
     gap: 0.3rem;
-    margin-bottom: 0.55rem;
+    margin-top: 0.65rem;
+    margin-bottom: 0.75rem;
   }
 
   .profile-image-swap {
     position: relative;
-    width: 80%;
+    width: 74%;
 
     figure {
       margin: 0;

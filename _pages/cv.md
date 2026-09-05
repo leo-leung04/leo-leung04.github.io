@@ -3,9 +3,10 @@ layout: none
 permalink: /cv/
 title: cv
 nav: true
-nav_order: 2
+nav_order: 10
 redirect: /assets/pdf/Jingcheng_Liang_research_CV.pdf
 ---
+
 <!doctype html>
 <html>
   <head>

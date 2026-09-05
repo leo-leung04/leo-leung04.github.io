@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: CS UG @ <img class='subtitle-school-logo subtitle-school-logo-umn' src='/assets/img/University_of_Minnesota_Logo.svg.png' alt='University of Minnesota logo' loading='lazy' decoding='async'> <a href='https://twin-cities.umn.edu/'>University of Minnesota, Twin Cities</a>
+subtitle: CS UG @ <a href='https://twin-cities.umn.edu/'>University of Minnesota, Twin Cities</a>
 
 profile:
   align: right
-  image: person_photo.jpg
+  image: person_photo_v2.jpg
   hover_images:
     - tea.webp
     - mess.webp
@@ -33,20 +33,21 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi there! I am a senior undergraduate student in Computer Science at 
+Hi there! I am a senior undergraduate student in Computer Science at
 <a class="about-inline-affiliation-link" href="https://twin-cities.umn.edu/">
-  <img class="about-inline-brand-icon about-inline-brand-icon-umn" src="/assets/img/University_of_Minnesota_Logo.svg.png" alt="University of Minnesota logo" loading="lazy" decoding="async">University of Minnesota, Twin Cities</a>.
+<img class="about-inline-brand-icon about-inline-brand-icon-umn" src="/assets/img/University_of_Minnesota_Logo.svg.png" alt="University of Minnesota logo" loading="lazy" decoding="async">University of Minnesota, Twin Cities</a>.
 Previously, I studied Economics at <a class="about-inline-affiliation-link" href="https://english.scnu.edu.cn/">
-  <img class="about-inline-brand-icon" src="/assets/img/scnu.png" alt="South China Normal University logo" loading="lazy" decoding="async">South China Normal University</a>.
+<img class="about-inline-brand-icon" src="/assets/img/scnu.png" alt="South China Normal University logo" loading="lazy" decoding="async">South China Normal University</a>.
 
 I am currently a research intern in
 <a class="about-inline-affiliation-link" href="https://minnesotanlp.github.io/index.html#people">
-  <img class="about-inline-brand-icon" src="https://www.google.com/s2/favicons?domain=minnesotanlp.github.io&sz=64" alt="Minnesota NLP Group logo" loading="lazy" decoding="async">Minnesota NLP Group</a>,
+<img class="about-inline-brand-icon" src="https://www.google.com/s2/favicons?domain=minnesotanlp.github.io&sz=64" alt="Minnesota NLP Group logo" loading="lazy" decoding="async">Minnesota NLP Group</a>,
 advised by Prof. [Dongyeop Kang](https://dykang.github.io/index.html). I am broadly interested in building and assessing capable, reliable, and prosocial digital agents that can tackle open-ended, complex tasks in the real world and enhance human well-being.
 {% comment %}
+
 - **Human → LM:** How can we understand, evaluate, and oversee language models as their capabilities outpace our ability to reliably assess them?
 - **LM → Human:** How can language models adapt to diverse human intentions, capabilities, and values to become better collaborators?
 - **LM → LM:** What new behaviors emerge when language models collaborate, and how can we design interactions that shape these collective dynamics?
-{% endcomment %}
+  {% endcomment %}
 
 Previously, I conducted research in computational biology advised by Prof. [Chad Myers](https://scholar.google.com/citations?user=yKHrbV4AAAAJ&hl=en) and Dr. [Wen Wang](https://scholar.google.com/citations?user=ecWpuBsAAAAJ&hl=en). I also participated in the [DFRACS project](https://cla.umn.edu/undergraduate-students/academics/research-opportunities/deans-first-year-research-creative-scholars) under the supervision of Prof. [Tianxi Li](https://sites.google.com/view/tianxili-homepage/home).

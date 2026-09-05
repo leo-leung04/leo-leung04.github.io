@@ -188,3 +188,66 @@
     color: var(--global-hover-color);
   }
 }
+
+// Keep the navigation beside the content on wide screens.
+@media (min-width: 1100px) {
+  body {
+    padding-left: 200px;
+    // The progress script sets a top offset for the mobile header inline.
+    padding-top: 48px !important;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 96px;
+    right: auto;
+    left: max(24px, calc((100vw - 1160px) / 2));
+    width: 160px;
+    padding: 0;
+    border-bottom: 0;
+    opacity: 1;
+    align-items: flex-start;
+
+    > .container {
+      display: block;
+      padding: 0;
+    }
+
+    .navbar-brand,
+    .navbar-toggler {
+      display: none;
+    }
+
+    .navbar-collapse {
+      display: block !important;
+      text-align: left !important;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: stretch;
+      margin-left: 0 !important;
+      gap: 0.25rem;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      padding: 0.375rem 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-text-color);
+      }
+    }
+
+    .navbar-nav .nav-item.active > .nav-link {
+      color: var(--global-text-color);
+      font-weight: 500;
+    }
+  }
+
+  #progress {
+    top: 0 !important;
+  }
+}
