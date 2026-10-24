@@ -13,3 +13,26 @@
   selected = {true},
   preview = {abstain-r1.png},
 }
+
+@article{dara,
+  title   = {Make Sparse Rewards Count: Density-Aware Reward Aggregation for Multi-Reward RL},
+  author  = {Tong Zheng* and Skylar Zhai* and Zhan Cheng* and TianMing Sha and Youling Huang and Shuo Zhou and Shaotong Qi and Jingcheng Liang and Xuwei Ding and Pengcheng Xu},
+  journal = {Under review},
+  year    = {2026},
+  abstract = {Multi-reward reinforcement learning trains large language models to satisfy multiple behavioral objectives simultaneously. Reward-wise normalization, as used in GDPO, preserves reward-specific relative information within rollout groups, but different objectives can still exhibit uneven learning progress. We study this behavior through advantage energy, the sum of a reward's squared advantages over a batch. Under idealized GDPO normalization, we show that this energy is proportional to active-group density: the fraction of rollout groups in which the reward provides nonzero relative advantages. This reveals a residual batch-level signal imbalance and provides a basis for calibrating reward contributions. Based on this relation, we propose Density-Aware Reward Aggregation (DARA). We derive an inverse-square-root density correction that gives greater weight to signals from less frequently active rewards. DARA computes its weights from each rollout batch, adapting to changes in reward activity throughout training without modifying the underlying policy optimization objective. Experiments on tool calling and mathematical reasoning show that DARA learns the targeted behaviors faster than GDPO, reaching high format compliance in up to 26% fewer training steps on tool calling and near-saturated length compliance in up to 65% fewer steps on mathematical reasoning, while remaining competitive in final performance.},
+  arxiv = {2610.00574},
+  code = {https://github.com/zhaihaotian/DARA},
+  preview = {dara.png},
+}
+
+@article{mrtpo,
+  title   = {Each Reward to Its Relevant Tokens: Reward-Specific Token-Level Credit Assignment for Multi-Reward RL},
+  author  = {Skylar Zhai and Haonan Wang and Zhining Liu and Linxin Song and Xuwei Ding and Jingcheng Liang and Jian Kang},
+  journal = {Under review},
+  year    = {2026},
+  abstract = {Language models are increasingly trained against several verifiable rewards at once, such as the correctness and the format of a tool call, or the individual constraints of a complex instruction. Reward-decoupled normalization (GDPO) normalizes each reward separately so that different reward combinations keep distinct advantages, but it still spreads every reward's advantage evenly over the whole response, although each verifier checks only a few positions. We propose MRTPO, which assigns the advantage of each reward to the tokens relevant to it, using the information its verifier checks, without auxiliary models or token-level annotations. For each reward, the policy replays its own response with and without that reward's verifier information, and the per-token Jensen-Shannon distance between the two next-token distributions measures each token's relevance and reassigns the advantage. On text-to-SQL, multi-constraint instruction following and tool calling, MRTPO converges faster and achieves better performance than the compared methods.},
+  arxiv = {2610.21439},
+  code = {https://github.com/zhaihaotian/MRTPO},
+  website = {https://zhaihaotian.github.io/MRTPO/},
+  preview = {mrtpo.png},
+}
